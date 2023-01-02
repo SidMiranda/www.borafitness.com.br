@@ -2,7 +2,6 @@ app/node_modules/
 app/node_modules/
 app/bower_components/
 app/bower_components/
-wp-content/uploads
 wp-config.php
 .htaccess
 .idea
