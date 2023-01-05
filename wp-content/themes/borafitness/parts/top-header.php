@@ -23,13 +23,13 @@ $youtube = get_field('link_youtube', 'options');
 			<nav class="busca" id="buscaRedes">
         <ul class="menu" id="menuRedes">
 					<a href="<?= $instagram ?>" target="_blank">
-						<img src="<?php echo get_template_directory_uri() . '/img/insta.svg'; ?>" data-svg="<?php echo get_template_directory_uri() . '/img/insta.svg'; ?>" alt="Rede Social">
+						<img src="<?php echo get_template_directory_uri() . '/img/insta-white.svg'; ?>" data-svg="<?php echo get_template_directory_uri() . '/img/insta-white.svg'; ?>" alt="Rede Social">
 					</a>
 					<a href="<?= $facebook ?>" target="_blank">
-						<img src="<?php echo get_template_directory_uri() . '/img/face.svg'; ?>" data-svg="<?php echo get_template_directory_uri() . '/img/face.svg'; ?>" alt="Rede Social">
+						<img src="<?php echo get_template_directory_uri() . '/img/face-white.svg'; ?>" data-svg="<?php echo get_template_directory_uri() . '/img/face-white.svg'; ?>" alt="Rede Social">
 					</a>
 					<a href="<?= $youtube ?>" target="_blank">
-						<img src="<?php echo get_template_directory_uri() . '/img/youtube.svg'; ?>" data-svg="<?php echo get_template_directory_uri() . '/img/youtube.svg'; ?>" alt="Rede Social">
+						<img src="<?php echo get_template_directory_uri() . '/img/youtube-white.svg'; ?>" data-svg="<?php echo get_template_directory_uri() . '/img/youtube-white.svg'; ?>" alt="Rede Social">
 					</a>
 				</ul>
       </nav>
