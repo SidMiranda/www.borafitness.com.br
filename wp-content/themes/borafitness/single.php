@@ -4,10 +4,8 @@
 
 get_header();
 
-// $post = get_post();
-// print_r($post);exit;
 
-$conteudo = apply_filters('the_content', get_the_content(), get_the_ID());
+
 
 //post principal
 $titulo = get_the_title();
@@ -49,6 +47,8 @@ if($postRelacionado->have_posts()) {
 }
 
 @include_once('parts/top-header.php');
+
+apply_filters('the_content', get_the_content(), get_the_ID());
 
 ?>
 
