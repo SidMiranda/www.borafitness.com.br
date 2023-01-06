@@ -5,7 +5,7 @@
 get_header();
 
 
-
+apply_filters('the_content', get_the_content(), get_the_ID());
 
 //post principal
 $titulo = get_the_title();
@@ -25,35 +25,57 @@ $redes = array(
     'flickr' => 'fa_flickr'
 );
 
-//post aleatorio
-$args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 1,
-    'post_status' => 'publish',
-    'orderby' => 'rand',
-    'order' => 'DESC'
-);
-
-$postRelacionado = new WP_Query($args);
-if($postRelacionado->have_posts()) {
-    while($postRelacionado->have_posts()){
-        $postRelacionado->the_post();
-        $tituloRelacionado = get_the_title();
-        $descriptionRelacionado = get_the_excerpt();
-        $linkRelacionado = get_the_permalink();
-        $categoriaRelacionado = get_the_category();
-        $imgDestaqueRelacionado = get_the_post_thumbnail_url();
-    }
-}
-
 @include_once('parts/top-header.php');
-
-apply_filters('the_content', get_the_content(), get_the_ID());
 
 ?>
 
 <container id="blogsSaude">
-  <div id="contentCardsinternal">
+  <div id="contentCardsinternal" >
+
+		<section class="contentConteudo">
+					<div id="contentcolumn">
+							<h4 id="categorys"><?= $categoria[0]->name ?> | <?= $dataPost ?></h4>
+
+							<h1 id="titulos"><?= $titulo ?></h1>
+
+							<img id="imgDestaque" src="<?= $imgDestaque ?>" alt="">
+
+							<div id="contentTextsConteudo"><?php $conteudo = the_content(); ?></div>
+
+							<div id="likes">
+									<button id="buttonlike">
+												<i class="fa-regular fa-heart"></i>      
+									</button>
+									<span id="numberLikes">128 likes</span> 
+							</div>
+					</div>
+		</section>
+
+		<?php 
+		
+			//post aleatorio
+			$args = array(
+				'post_type' => 'post',
+				'posts_per_page' => 1,
+				'post_status' => 'publish',
+				'orderby' => 'rand',
+				'order' => 'DESC'
+			);
+
+			$postRelacionado = new WP_Query($args);
+			if($postRelacionado->have_posts()) {
+				while($postRelacionado->have_posts()){
+						$postRelacionado->the_post();
+						$tituloRelacionado = get_the_title();
+						$descriptionRelacionado = get_the_excerpt();
+						$linkRelacionado = get_the_permalink();
+						$categoriaRelacionado = get_the_category();
+						$imgDestaqueRelacionado = get_the_post_thumbnail_url();
+				}
+			}
+		
+		?>
+
     <!-- COLUNA LATERAL CONTENT -->
     <section class="contentInternal">
 
@@ -122,24 +144,7 @@ apply_filters('the_content', get_the_content(), get_the_ID());
 
           <!-- NOVA COLUNA COM CONTÉUDO -->
 
-		<section class="contentConteudo">
-					<div id="contentcolumn">
-							<h4 id="categorys"><?= $categoria[0]->name ?> | <?= $dataPost ?></h4>
-
-							<h1 id="titulos"><?= $titulo ?></h1>
-
-							<img id="imgDestaque" src="<?= $imgDestaque ?>" alt="">
-
-							<div id="contentTextsConteudo"><?php $conteudo = the_content(); ?></div>
-
-							<div id="likes">
-									<button id="buttonlike">
-												<i class="fa-regular fa-heart"></i>      
-									</button>
-									<span id="numberLikes">128 likes</span> 
-							</div>
-					</div>
-		</section>
+		
          
     </div>
 
