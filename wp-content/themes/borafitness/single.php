@@ -4,22 +4,20 @@
 
 get_header();
 
+// $post = get_post();
+// print_r($post);exit;
+
+$conteudo = apply_filters('the_content', get_the_content(), get_the_ID());
+
 //post principal
 $titulo = get_the_title();
-// $subtitulo = get_field("subtitulo", $post->ID);
-$conteudo = get_the_content();
+
 $categoria = get_the_category();
 $dataPost = get_the_date();
-// $bgMobile = get_field("banner_mobile", "option");
-// $bgDesk = get_field("banner_desktop", "option");
+
 $author = get_the_author();
 $tags = get_the_tags();
 $imgDestaque = get_the_post_thumbnail_url();
-
-// $logoMobile = get_field("logo_blog_mobile", 'option');
-// $logoDesk = get_field("logo_blog_desk", 'option');
-
-// $menuBlog = get_field("menuBlog", 'option');
 
 $redes = array(
     'instagram' => '/img/footer_icon_instagram.svg',
@@ -132,13 +130,13 @@ if($postRelacionado->have_posts()) {
 
 							<img id="imgDestaque" src="<?= $imgDestaque ?>" alt="">
 
-							<div id="contentTextsConteudo"><?= $conteudo ?></div>
+							<div id="contentTextsConteudo"><?php $conteudo = the_content(); ?></div>
 
 							<div id="likes">
 									<button id="buttonlike">
 												<i class="fa-regular fa-heart"></i>      
 									</button>
-									<span id="numberLikes" style="display:none">128 likes</span> 
+									<span id="numberLikes">128 likes</span> 
 							</div>
 					</div>
 		</section>
