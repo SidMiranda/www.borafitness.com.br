@@ -7,8 +7,8 @@ $facebook = get_field('link_facebook', 'options');
 $youtube = get_field('link_youtube', 'options');
 ?>
 
-<header id="headerBlock" style="background-color:<?= $headerColor; ?>">
-	<div class="container">
+<header id="newHeaderBlock" style="background-color:<?= $headerColor; ?>">
+	<div class="newContainer">
 		<nav id="menu">
 			<ul>
 				<li><a href="<?php echo get_home_url(); ?>" style="color:<?= $menuColor.'!important'; ?>">HOME</a></li>
@@ -38,8 +38,8 @@ $youtube = get_field('link_youtube', 'options');
 
 <script>
 
-const headerBlock = document.querySelector("#headerBlock");
-const imgLogo = document.querySelector(".img-logo");
+const headerBlock = document.querySelector("#newHeaderBlock");
+const imgLogo = document.querySelector("#logo img");
 if (headerBlock) {
 
 	(function scrollMenu() {
@@ -49,8 +49,10 @@ if (headerBlock) {
 			scrollTop = document.documentElement.scrollTop;
 			if (scrollTop > 50) {
 				headerBlock.classList.add("on");
+				imgLogo.classList.add("on");
 			} else {
 				headerBlock.classList.remove("on");
+				imgLogo.classList.remove("on");
 			}
 		}
 	})();
