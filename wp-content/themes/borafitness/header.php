@@ -14,6 +14,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		if($(window).width() < 768 ) {
+			$("#banner_mob").fadeIn('slow');
+		} else {
+			$("#banner_desk").fadeIn('slow');
+		}
+		
+	});
+	</script>
+
 	<link rel="preload" as="style" href="<?php echo get_template_directory_uri(); ?>/css/libs.min.css">
 	
 	<?php wp_head(); ?>
