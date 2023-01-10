@@ -3,7 +3,7 @@
 /* Template Name: blog */
 
 get_header(); 
-@include_once('parts/top-header.php');
+@include_once('parts/new-header.php');
 ?>
 
 <div style="width:100%; height:120px"></div>

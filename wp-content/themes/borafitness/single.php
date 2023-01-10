@@ -25,7 +25,7 @@ $redes = array(
     'flickr' => 'fa_flickr'
 );
 
-@include_once('parts/top-header.php');
+@include_once('parts/new-header.php');
 
 ?>
 
