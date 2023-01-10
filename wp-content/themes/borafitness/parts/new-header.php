@@ -15,11 +15,13 @@ $youtube = get_field('link_youtube', 'options');
 				<li><a href="<?php echo get_home_url().'/blog'; ?>" style="color:<?= $menuColor.'!important'; ?>">BLOG</a></li>
 			</ul>
 		</nav>
+		<a class="hidden-xl" href="<?php echo get_home_url(); ?>" style="color:<?= $menuColor.'!important'; ?>">HOME</a>
 		<div id="logo">            
 				<a href="#"> 
 						<img src="<?= $logo['url'] ?>" alt="Blog">
 				</a>
 		</div>
+		<a class="hidden-xl" href="<?php echo get_home_url().'/blog'; ?>" style="color:<?= $menuColor.'!important'; ?>">BLOG</a>
 		<nav id="redes">
         <ul>
 					<a href="<?= $instagram ?>" target="_blank">
