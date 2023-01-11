@@ -26,4 +26,6 @@ $imgDestaque = get_the_post_thumbnail_url();
 	</div>
 </container>
     
-<?php get_footer(); ?>
+<?php 
+@include_once('parts/bottom-footer.php');
+get_footer(); ?>

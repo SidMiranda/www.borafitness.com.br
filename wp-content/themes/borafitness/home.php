@@ -35,9 +35,7 @@ $banner_mob = get_template_directory_uri() . "/assets/banner_mob.png";
 	</div>
 </div>
 
-<div id="rodape">
-	<p>©2023 Todos os direitos reservados | @borafitness</p>
-</div>
 <?php
+@include_once('parts/bottom-footer.php');
 get_footer(); 
 ?>

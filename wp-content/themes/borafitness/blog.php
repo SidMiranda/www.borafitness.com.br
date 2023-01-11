@@ -15,4 +15,6 @@ get_header();
 
 </div>
 
-<?php get_footer(); ?>
+<?php 
+@include_once('parts/bottom-footer.php');
+get_footer(); ?>
