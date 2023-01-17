@@ -5,6 +5,8 @@ get_header();
 
 $banner_desk = get_template_directory_uri() . "/assets/banner_desk.png";
 $banner_mob = get_template_directory_uri() . "/assets/banner_mob.png";
+$banner_blue_desk = get_template_directory_uri() . "/assets/banner_blue_desk.png";
+$banner_blue_mob = get_template_directory_uri() . "/assets/banner_blue_mobile.png";
 ?>
 
 <div class="container">
@@ -26,7 +28,8 @@ $banner_mob = get_template_directory_uri() . "/assets/banner_mob.png";
 ?>
 <div class="container" style="margin-top:0px!important">
 	
-	<img id="banner2" src="<?php echo get_template_directory_uri(); ?>/assets/banner5.png" alt="Main Banner">
+	<img id="banner_blue_desk" src="<?php echo $banner_blue_desk ?>" alt="Second Banner">
+	<img id="banner_blue_mob" src="<?php echo $banner_blue_mob ?>" alt="Second Banner">
 	<div id="channel2">
 		<span>@canal borafitness</span>
 		<a href="https://www.youtube.com/@canalborafitness" target="_blank">
