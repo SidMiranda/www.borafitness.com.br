@@ -3,7 +3,7 @@
 
 		$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => 12,
+			'posts_per_page' => 50,
 			'post_status' => 'publish',
 			'orderby' => 'date',
 			'order' => 'DESC'
@@ -30,9 +30,9 @@
 										</a>
 								</div>
 
-								<div class='content_description'>
+								<!-- <div class='content_description'>
 										<p id='description'><?= $description ?></p>
-								</div>
+								</div> -->
 
 								<a href='<?= $link ?>' id='leiaMore'>Leia Mais</a>
 						</div>
