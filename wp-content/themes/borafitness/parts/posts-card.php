@@ -14,7 +14,6 @@
 				while($query->have_posts()){
 						$query->the_post();
 						$titulo = get_the_title();
-						$description = get_the_excerpt();
 						$link = get_the_permalink();
 						$categoria = get_the_category();
 						$imgDestaque = get_the_post_thumbnail_url();
@@ -24,7 +23,7 @@
 										<img id='imgcard' src='<?= $imgDestaque ?>'>
 								</a>
 								<div id='texts'>
-										<span id='category'><?= $categoria[0]->name ?></span>
+										<span id='category' style="background-color:<?= $headerColor; ?>; color:<?= $menuColor;?>"><?= $categoria[0]->name ?></span>
 										<a href='<?= $link ?>'>
 												<h3 id='titleCard'><?= $titulo ?></h3>
 										</a>

@@ -23,7 +23,7 @@
 										<img id='imgcard' src='<?= $imgDestaque ?>'>
 								</a>
 								<div id='texts'>
-										<span id='category'><?= $categoria[0]->name ?></span>
+										<span id='category' style="background-color:<?= $headerColor; ?>; color:<?= $menuColor; ?>"><?= $categoria[0]->name ?></span>
 										<a href='<?= $link ?>'>
 												<h3 id='titleCard'><?= $titulo ?></h3>
 										</a>
