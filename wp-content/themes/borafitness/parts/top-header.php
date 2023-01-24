@@ -11,7 +11,7 @@ $youtube = get_field('link_youtube', 'options');
 	<div class="container">
 			<nav class="busca" id="buscaHome">
 					<ul class="menu" id="menuHome">
-							<li><a href="<?php echo get_home_url(); ?>" style="color:<?= $menuColor.'!important'; ?>">sid</a></li>
+							<li><a href="<?php echo get_home_url(); ?>" style="color:<?= $menuColor.'!important'; ?>">Home</a></li>
 							<li><a href="<?php echo get_home_url().'/blog'; ?>" style="color:<?= $menuColor.'!important'; ?>">Blog</a></li>
 					</ul>
 			</nav>
