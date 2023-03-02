@@ -1,11 +1,14 @@
-<div id="contentCards">
+
+<div class="blockContainer">
+	<h2>ACESSE NOSSO BLOG</h2>
+	<div id="contentCards">
 	<?php
 
     $avatar = get_template_directory_uri() . "/assets/avatar.png"; 
 
 		$args = array(
 			'post_type' => 'post',
-			'posts_per_page' => 50,
+			'posts_per_page' => 6,
 			'post_status' => 'publish',
 			'orderby' => 'date',
 			'order' => 'DESC'
@@ -44,4 +47,10 @@
 				}
 			}   
 	?>
+	</div>
+
+	<div id="btnMoreCards" style="background-color:<?= $headerColor; ?>; color:<?= $menuColor;?>">
+		<a href="<?= get_site_url(); ?>/blog">Ver mais</a>
+	</div>
+
 </div>

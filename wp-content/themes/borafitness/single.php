@@ -12,8 +12,9 @@ $author = get_the_author();
 $tags = get_the_tags();
 $imgDestaque = get_the_post_thumbnail_url();
 
-@include_once('parts/new-header.php');
+@include_once('parts/top-header.php');
 ?>
+<div style="width:100%; height:100px; background-color:#78D556;"></div>
 
 <container id="blogsSaude">
   <div id="contentCardsinternal" >
