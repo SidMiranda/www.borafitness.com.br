@@ -38,7 +38,6 @@ $youtube = get_field('link_youtube', 'options');
 	</div>
 </header>
 
-
 <script>
 
 const headerBlock = document.querySelector("#newHeaderBlock");
