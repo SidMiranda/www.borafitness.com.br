@@ -5,10 +5,3 @@ app/bower_components/
 wp-config.php
 .htaccess
 .idea
-app/src/assets/images
-src/temp/*
-src/temp/
-app/src
-app/*
-app/
-app
